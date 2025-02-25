@@ -1,3 +1,4 @@
+import 'package:eastri_customer_app/pages/onboarding_screen2.dart';
 import 'package:flutter/material.dart';
 
 void main() {
@@ -46,6 +47,7 @@ class OnboardingContent extends StatelessWidget {
             Image.asset(
               'lib/images/iron.png',
               width: screenSize.width,
+              fit: BoxFit.cover,
             ),
             Image.asset(
               'lib/images/overlay.png',
@@ -75,12 +77,22 @@ class OnboardingContent extends StatelessWidget {
               ),
             ),
             Positioned(
-                left: 0,
-                right: 0,
-                bottom: screenSize.height * 0.05,
+              left: 0,
+              right: 0,
+              bottom: screenSize.height * 0.05,
+              child: GestureDetector(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => OnboardingScreen2()),
+                  );
+                },
                 child: Image.asset(
                   'lib/images/Group.png',
-                )),
+                ),
+              ),
+            )
           ],
         ),
       ),

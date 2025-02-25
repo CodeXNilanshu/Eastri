@@ -1,3 +1,4 @@
+import 'package:eastri_customer_app/pages/login1.dart';
 import 'package:flutter/material.dart';
 import 'dart:ui';
 
@@ -104,17 +105,26 @@ class SignUpScreen extends StatelessWidget {
                       Positioned(
                         left: -20,
                         top: 30,
-                        child: SizedBox(
-                          width: 372,
-                          child: Text(
-                            'sign up',
-                            textAlign: TextAlign.center,
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 40,
-                              fontFamily: 'Inter',
-                              fontWeight: FontWeight.w900,
-                              height: 1,
+                        child: GestureDetector(
+                          onTap: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => EastriLoginScreen()),
+                            );
+                          },
+                          child: SizedBox(
+                            width: 372,
+                            child: Text(
+                              'sign up',
+                              textAlign: TextAlign.center,
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 40,
+                                fontFamily: 'Inter',
+                                fontWeight: FontWeight.w900,
+                                height: 1,
+                              ),
                             ),
                           ),
                         ),

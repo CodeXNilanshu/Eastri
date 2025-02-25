@@ -1,3 +1,6 @@
+import 'package:eastri_customer_app/pages/homepage.dart';
+import 'package:eastri_customer_app/pages/login1.dart';
+import 'package:eastri_customer_app/pages/login2.dart';
 import 'package:flutter/material.dart';
 import 'pages/onboarding_screen_1.dart';
 
@@ -32,7 +35,7 @@ class MyApp extends StatelessWidget {
         colorScheme: ColorScheme.fromSeed(seedColor: Colors.deepPurple),
         useMaterial3: true,
       ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
+      home: OnboardingScreen1(),
     );
   }
 }
